@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,300;1,400;1,700;1,900&display=swap');
+
+html{
+    font-size: 65%;
+    /*overflow: hidden;*/
+}
+body{
+    background-color: #FAF0D7;
+}
+section{
+    padding: 3rem 3rem;
+}
+.empty{
+    padding: 1.5rem;
+    background-color: #FAF0D7;
+    text-align: center;
+    font-size: 2rem;
+    color: #937D86;
+}
+.heading{
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FAF0D7;
+    font-size: 3rem;
+    background-color: #8CC0DE;
+}
+.message{
+    display: flex;
+    position: sticky;
+    top: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 2rem;
+    background-color: #8CC0DE;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    z-index: 100;
+}
+.message span{
+    background-color: #8CC0DE;
+    font-size: 1.5rem;
+    color: #937D86;
+}
+.message i{
+    color: #937D86;
+    font-size: 2rem;
+    cursor: pointer;;
+}
+.message i:hover{
+    transform: rotate(90deg);
+    font-size: 2.5rem;
+}
+.btn, .option-btn, .delete-btn, .white-btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    color: #f4bfbf;
+    font-size: 180%;
+    cursor: pointer;
+    border: none;
+}
+.white-btn, .btn{
+    background-color: transparent;
+    border: 0.15rem solid #937D86;
+    text-transform: uppercase;
+    color: #937D86;
+    transition: 0.5s;
+}
+.btn:hover, .option-btn:hover, .delete-btn:hover{
+    background-color: #937D86;
+    color: #f4bfbf;
+}
+.option-btn{
+    font-size: 1.5rem;
+    background-color: #f4bfbf;
+}
+.delete-btn{
+    font-size: 1.5rem;
+    background-color: #8CC0DE;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif, 'Merriweather', serif;
+    transition: all 0.3s;
+}
+*::selection{
+    background-color: #937D86;
+    color: #FAF0D7;
+}
+*::-webkit-scrollbar{
+    height: 0.5rem;
+    width: 1rem;
+    background-color: #FAF0D7;
+}
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: #937D86;
+}
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #f4bfbf;
+    z-index: 99;
+}
+.header .flex{
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+    color: #937D86;
+}
+.header .flex a{
+    text-decoration: none;
+    color: #937D86;
+}
+.header .flex .logo{
+    font-size: 2.5rem;
+    color: #937D86;
+}
+.header .flex .logo span{
+    color: #8CC0DE;
+    border-radius: 0.5rem;
+}
+.header .flex .nav-bar a{
+    text-decoration: none;
+    color: #937D86;
+    margin: 3rem;
+    font-size: 2rem;
+}
+.header .flex .nav-bar a:hover{
+    font-size: 2.3rem;
+    font-weight: 500;
+}
+.header .flex .icon div{
+    margin-left: 1.5rem;
+    font-size: 2.5rem;
+    color: #937D86;
+    cursor: pointer;
+}
+.header .flex .icon div:hover{
+    font-size: 2.8rem;
+}
+@keyframes fade-in{
+    0%{
+        transform: translateY(1rem);
+        opacity: 0.2s;
+    }
+}
+.header .flex .account-box{
+    display: none;
+    position: absolute;
+    top: 120%;
+    right: 2rem;
+    width: 30rem;
+    padding: 2rem;
+    text-align: center;
+    border: 0.1rem solid #937D86;
+    animation: fade-in 0.3s;
+    background-color: #FAF0D7;
+    background-image: url('../img/60459-s.jpeg');
+}
+.header .flex .account-box.active{
+    display: inline-block;
+}
+.header .flex .account-box p{
+    font-size: 1.5rem;
+    color: #937D86;
+    margin-bottom: 1.5rem;
+}
+.header .flex .account-box .delete-btn{
+    margin-top: 0;
+}
+.header .flex .account-box .delete-btn:hover{
+    color: #8CC0DE;
+} 
+#menu-btn{
+    display: none;
+}
+.dashboard .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    align-items: flex-start;
+}
+.dashboard .box-container .box{
+    padding: 2rem;
+    background-image: url('../img/大理石.jpeg');
+    background-color: rgba(0, 0, 0, .5);
+    background-blend-mode: multiply;
+    text-align: center;
+    outline: none;
+}
+.dashboard .box-container .box h3{
+    font-size: 4rem;
+    color: #8CC0DE;
+    margin-bottom: 0.5rem;
+}
+.dashboard .box-container .box p{
+    padding: 1.5rem;
+    color: #8CC0DE;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.add-products form{
+    background-image: url('../img/大理石.jpeg');
+    background-color: rgba(0, 0, 0, .5);
+    background-blend-mode: multiply;
+    padding: 2rem;
+    text-align: center;
+    margin: 0 auto;
+}
+.add-products .btn{
+    color: #8CC0DE;
+    border: 0.15rem solid #8CC0DE;
+}
+.add-products .btn:hover{
+    color: #FAF0D7;
+    background-color: #8CC0DE;
+}
+.add-products form h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #8CC0DE;
+    margin-bottom: 1.5rem;
+}
+.add-products form .box{
+    width: 100%;
+    max-width: 50rem;
+    margin: 1rem 1rem;
+    padding: 1.2rem 1.4rem;
+    background-color: #FAF0D7;
+    border: none;
+    font-size: 1.7rem;
+    color: #8CC0DE;
+    outline: none;
+}
+.add-products form .box::placeholder{
+    color: #8CC0DE;
+}
+.add-products form .box:focus{
+    border: 0.1rem solid #8CC0DE;
+}
+.show-products{
+    padding-top: 0;
+}
+.show-products .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    align-items: flex-start;
+    justify-content: center;
+}
+.show-products .box-container .box{
+    padding: 2rem;
+    text-align: center;
+    background-color: #937D86;
+    border: 0.15rem solid #937D86;
+    /*max-width: 30%;*/
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
+}
+.show-products .box-container .box img{
+    height: 30rem;
+    max-width: 25rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+}
+.show-products .box-container .box .name{
+    padding: 1rem 0;
+    font-size: 1.8rem;
+    color: #FAF0D7;
+}
+.show-products .box-container .box .price{
+    padding: auto;
+    font-size: 2rem;
+    color: #FAF0D7;
+}
+.show-products .box-container .box .brand-type{
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: #f4bfbf;
+    
+}
+.show-products .box-container .box a{
+    display: inline-block;
+    margin: 0 0.5rem;
+}
+.show-products .box-container .box .option-btn{
+    color: #f4bfbf;
+    border: 0.15rem solid #f4bfbf;
+    background-color: transparent;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 1.5rem;
+}
+.show-products .box-container .box .option-btn:hover{
+    background-color: #f4bfbf;
+    color: #937D86;
+}
+.show-products .box-container .box .delete-btn{
+    color: #8CC0DE;
+    border: 0.15rem solid #8CC0DE;
+    background-color: transparent;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 1.5rem;
+}
+.show-products .box-container .box .delete-btn:hover{
+    background-color: #8CC0DE;
+    color: #937D86;
+}
+.edit-product-form{
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    overflow: scroll;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 120;
+    height: auto;
+    overflow: scroll;
+}
+.edit-product-form img{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
+    height: 25rem;
+    margin-bottom: 1rem;
+}
+.edit-product-form form{
+    outline: none;
+    width: 40rem;
+    padding: 2rem;
+    text-align: center;
+    background-image: url('../img/60459-s.jpeg');
+}
+.edit-product-form form input{
+    outline: none;
+    width: 45%;
+    margin: 1rem 0;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.8rem;
+    border: 0.15rem solid #937D86;
+    background: transparent;
+    color: #937D86;
+    margin-inline: 2.31%;
+}
+#img{
+    width: 95%;
+}
+.edit-product-form form input:focus{
+    border: 0.2rem solid #937D86; 
+}
+.edit-product-form form .btn{
+    display: inline-block;
+    max-width: 45%;
+    text-transform: uppercase;
+    padding: 1.2rem 1.4rem;
+    margin-inline: 2.31%;
+}
+.orders .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    align-items: flex-start;
+    justify-content: center;
+}
+.orders .box-container .box{
+    background-color: #8CC0DE;
+    color: #937D86;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+}
+.orders .box-container .box p{
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #937D86;
+}
+.orders .box-container .box p span{
+    color: #937D86;
+}
+.orders .box-container .box form{
+    text-align: center;
+}
+.orders .box-container .box form select{
+    width: 100%;
+    background-color: #FAF0D7;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.5rem;
+    color: #937D86;
+    margin: 0.5rem 0;
+    outline: none;
+}
+.orders .box-container .option-btn{
+    background-color: transparent;
+    color: #937D86;
+    text-transform: uppercase;
+    border: 0.15rem solid #937D86;
+}
+.orders .box-container .option-btn:hover{
+    background-color: #937D86;
+    color: #8CC0DE;
+}
+.orders .box-container .delete-btn{
+    background-color: transparent;
+    color: #f4bfbf;
+    text-transform: uppercase;
+    border: 0.15rem solid #f4bfbf;
+    text-decoration: none;
+}
+.orders .box-container .delete-btn:hover{
+    background-color: #f4bfbf;
+    color: #8CC0DE;
+}
+/*orders.box-container*/
+.users .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    align-items: flex-start;
+    justify-content: center;
+}
+/*orders.box-container.box*/
+.users .box-container .box{
+    background-color: #937D86;
+    color: #8CC0DE;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+    text-align: center;
+}
+.users .box-container .box p{
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #f4bfbf;
+}
+.users .box-container .box p span{
+    color: #FAF0D7;
+}
+.users .box-container .box .delete-btn{
+    margin-top: 0;
+    text-decoration: none;
+    justify-content: center;
+    background: transparent;
+    color: #8CC0DE;
+    border: 0.15rem solid #8CC0DE;
+    text-transform: uppercase;
+}
+.users .box-container .box .delete-btn:hover{
+    background-color: #8CC0DE;
+    color: #937D86;
+}
+
+@media (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+}
+@media (max-width: 768px){
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .flex .nav-bar{
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: #f4bfbf;
+        border-top: 0.2rem solid #937D86;
+        border-bottom: 0.2rem solid #937D86;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .flex .nav-bar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .header .flex .nav-bar a{
+        margin: 2rem;
+        display: block;
+    }
+    .header .flex .nav-bar a:hover{
+        font-size: 2.2rem;
+        font-weight: 500;
+    }
+}
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+}
