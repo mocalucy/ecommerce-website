@@ -4,6 +4,16 @@ This project is a basic PHP-based e-commerce website that includes both **admin*
 
 ---
 
+## 🖼️ Demo
+
+### 👤 Admin Panel
+![Admin Demo](admin_demo.gif)
+
+### 🛍️ User Interface
+![User Demo](user_demo.gif)
+
+---
+
 ## 📂 Structure
 
 - **Frontend**: HTML, CSS, JavaScript  
